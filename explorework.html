@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>File Explorer — VK</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+      color: #1e293b;
+    }
+    /* Top bar */
+    .topbar {
+      background: #1e293b;
+      color: white;
+      padding: 12px 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    /* Explorer container */
+    .explorer {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
+    }
+    /* File/folder box */
+    .item {
+      text-align: center;
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .item:hover {
+      background: #e2e8f0;
+      transform: translateY(-3px);
+    }
+    .item img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+    .name {
+      font-size: 14px;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="topbar">📂 My File Explorer</div>
+
+  <!-- Explorer grid -->
+  <div class="explorer">
+    <a href="project1.html" class="item">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Folder">
+      <div class="name">Project 1</div>
+    </a>
+    <a href="project2.html" class="item">
+      <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" alt="Folder">
+      <div class="name">Project 2</div>
+    </a>
+    <a href="docs.html" class="item">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Document">
+      <div class="name">Documents</div>
+    </a>
+    <a href="images.html" class="item">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337940.png" alt="Images">
+      <div class="name">Images</div>
+    </a>
+    <a href="videos.html" class="item">
+      <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="Videos">
+      <div class="name">Videos</div>
+    </a>
+  </div>
+</body>
+</html>

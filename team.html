@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Team — VK Portfolio</title>
+  <meta name="description" content="Meet the team behind VK." />
+  <style>
+    :root{--bg:#041022;--muted:#9fb2c6;--accent:#00d4ff;--card:#0b1220;--radius:12px;--maxwidth:1100px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto;color:#eaf8ff;background:linear-gradient(180deg,#021224,#06162a);padding:26px;display:flex;justify-content:center;}
+    .wrap{max-width:var(--maxwidth);width:100%}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#8e44ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#04101a}
+    .nav{display:flex;gap:10px}
+    .nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
+    .nav a.active{background:linear-gradient(90deg,var(--accent),#8e44ff);color:#04101a}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .member{background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .member img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+    .member h4{margin-bottom:6px}
+    .member p{color:var(--muted);font-size:14px}
+
+    .roles{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .role{padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted);font-size:13px}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    @media (max-width:980px){.grid{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="work.html" style="display:flex;gap:10px;align-items:center;text-decoration:none;color:inherit">
+        <div class="logo">VK</div>
+        <div>
+          <strong>VK Portfolio</strong><div style="font-size:12px;color:var(--muted)">Team</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="team.html" class="active">Team</a>
+        <a href="contact.html">Contact</a>
+        <a href="careers.html">Careers</a>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2 style="font-size:22px;margin-bottom:10px">Our team</h2>
+        <p style="color:var(--muted)">Small cross-functional teams with a focus on craft and trust. We hire for curiosity and ownership.</p>
+
+        <div class="grid" style="margin-top:14px">
+          <div class="member">
+            <img src="https://picsum.photos/seed/1/600/400" alt="">
+            <h4>Vasanth Kumar</h4>
+            <p style="color:var(--muted)">Founder — Full Stack Developer. Loves building reliable systems and clean UX.</p>
+            <div class="roles"><div class="role">Engineering</div><div class="role">Product</div></div>
+          </div>
+
+          <div class="member">
+            <img src="https://picsum.photos/seed/2/600/400" alt="">
+            <h4>Asha Patel</h4>
+            <p style="color:var(--muted)">Design Lead — Builds design systems and delightful interactions.</p>
+            <div class="roles"><div class="role">Design</div><div class="role">Motion</div></div>
+          </div>
+
+          <div class="member">
+            <img src="https://picsum.photos/seed/3/600/400" alt="">
+            <h4>Ravi Kumar</h4>
+            <p style="color:var(--muted)">Engineering Manager — Infrastructure and developer experience advocate.</p>
+            <div class="roles"><div class="role">SRE</div><div class="role">Backend</div></div>
+          </div>
+
+          <div class="member">
+            <img src="https://picsum.photos/seed/4/600/400" alt="">
+            <h4>Meera Joshi</h4>
+            <p style="color:var(--muted)">Product Manager — Aligns outcomes to strategy and customer needs.</p>
+            <div class="roles"><div class="role">Product</div><div class="role">Strategy</div></div>
+          </div>
+
+          <div class="member">
+            <img src="https://picsum.photos/seed/5/600/400" alt="">
+            <h4>Sanjay Rao</h4>
+            <p style="color:var(--muted)">Data Analyst — Metrics, instrumentation and experiments.</p>
+            <div class="roles"><div class="role">Data</div><div class="role">Growth</div></div>
+          </div>
+
+          <div class="member">
+            <img src="https://picsum.photos/seed/6/600/400" alt="">
+            <h4>Priya Singh</h4>
+            <p style="color:var(--muted)">QA & Automation — Quality-at-scale and regression safety nets.</p>
+            <div class="roles"><div class="role">QA</div><div class="role">Automation</div></div>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        Curious about roles or collaboration? <a href="careers.html" style="color:var(--accent);text-decoration:none">See open roles</a>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    (function(){ const p = location.pathname.split('/').pop()||'team.html'; document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active', a.getAttribute('href')===p)); })();
+  </script>
+</body>
+</html>

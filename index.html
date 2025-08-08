@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" class="lenis lenis-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VK Software Solutions</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="./public/main.js" type="module" defer></script>
+
+
+
+  </head>
+  <body class="body dark" id="scrollbar">
+    <canvas></canvas>
+    <div class="loader"></div>
+    <div class="loader2"></div>   
+    <div class="initial-loader"></div>
+
+    <div class="main-navbar-container">
+      <div class="main-navbar">
+        <div class="logo">
+          <img src="./public/images/logo.png" alt="" />
+        </div>
+        <div class="toggle-options">
+          <div class="light-mode-option magnetic-buttons">
+            <img
+              src="./public/images/light-mode-icon.035572eb.svg"
+              alt=""
+              width="30px"
+              class="light-mode-image"
+            />
+          </div>
+          <div class="sound-option magnetic-buttons">
+            <img
+              src="./public/images/sound-mute.99b17403.svg"
+              alt=""
+              width="30px"
+            />
+          </div>
+        </div>
+        <div class="menu-container">
+          <div class="menu-close">MENU</div>
+          <div class="hamburger-menu hidden magnetic-buttons">
+            <span class="menu-line1"></span>
+            <span class="menu-line2"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section>
+      <div class="cursor-normal cursor-transition" id="cursor"></div>
+    </section>
+    <div class="main-page-container">
+      
+
+      <section class="first-section-content-container">
+        <div class="first-section-content">
+          <div class="main-title-content" id="main-title-content">
+            <div class="first-line-content">Welcome To</div>
+            <div class="second-line-content">VK Software Solutions</div>
+            <div class="mobile-fl-content colorBlack">roar</div>
+            <div class="mobile-sl-content">in the digital</div>
+            <div class="mobile-tl-content">wilderness</div>
+          </div>
+          <div class="punch-line-container">
+            <span>WE MAKE CREATIVITY WORK – WEBSITES AND APPLICATIONS FOR YOUR BRAND!<sup>®</sup></span>
+            <span>OUR TEAM OF CREATIVES BRAINSTORMS GREAT IDEAS ALL. THE. TIME.</span>
+            <span>WITH OUR SKILLS COMBINED, YOUR BRAND GETS EVERYTHING IT NEEDS</span>
+          </div>
+          <div class="video-down-arrow magnetic-buttons">
+            <img src="./public/images/move-down.31fd25f2.svg" width="25px" />
+          </div>
+        </div>
+        <div class="first-section-button">
+           <button class="s1 magnetic-button" onclick="window.location.href='explorework.html'">
+  <div class="magnetic-text">Explore Work</div>
+</button>
+         <button class="s1 magnetic-button" onclick="window.location.href='getintouch.html'">
+  <div class="magnetic-text">Get in touch</div>
+</button>
+
+
+        </div>
+      </section>
+
+      <div class="video-animation">
+        <video
+          src="./public/intro-video.mp4"
+          class="video-animation-video"
+          autoplay
+          loop
+          muted
+        ></video>
+      </div>
+
+      <section class="recent-work-section">
+        <div class="recent-work-text">
+          <div class="recent-work-title">
+            <div class="recent-text-recent">recent</div>
+            <div class="recent-text-work">work</div>
+          </div>
+          <div class="recent-work-punchline" id="recent-work-punchline">
+            <div class="recent-work-puncline-text">
+              In the creative wilderness,
+            </div>
+            <div class="recent-work-puncline-text">
+              clients find our work truly
+            </div>
+            <div class="recent-work-puncline-text">beloved.</div>
+
+            <div class="recent-work-button">
+             <button class="s1 magnetic-button" onclick="window.location.href='explorework.html'">
+  <div class="magnetic-text">Explore Work</div>
+</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="work-display">
+        <div class="work-row-reverse">
+          <div class="work-row-image work-row-image-right">
+            <img
+              src="./public/images/media.png"
+              class="work-row-images"
+            />
+          </div>
+          <div class="work-row-text">
+            <div class="work-row-title">Social Media</div>
+            <div class="skill-types">Media is a modern social media web application built with the MERN stack. It allows users to connect, share posts, like and comment.</div>
+
+            <div class="view-project-button">
+              <button class="s1 magnetic-button"
+        onclick="window.location.href='https://vk-media.vercel.app/'">
+  <div class="magnetic-text">View Project</div>
+</button>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="work-row">
+          <div class="work-row-image work-row-image-left">
+            <img
+              src="./public/images/chat.png"
+              class="work-row-images"
+            />
+          </div>
+          <div class="work-row-text work-row-text-left">
+            <div class="work-row-title">chat</div>
+            <div class="skill-types">Chat is a real-time web chatting application where users can send messages, manage profiles. Built using the MERN stack.</div>
+
+            <div class="view-project-button">
+            <button class="s1 magnetic-button"
+        onclick="window.location.href='https://vk-chat-beta.vercel.app/'">
+  <div class="magnetic-text">View Project</div>
+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-row-reverse">
+          <div class="work-row-image work-row-image-right">
+            <img
+              src="./public/images/foody.png"
+              class="work-row-images"
+            />
+          </div>
+
+          <div class="work-row-text">
+            <div class="work-row-title">Foody</div>
+            <div class="skill-types">Tasty is an online food ordering web app where users can browse menus, view delicious food items, and place orders with ease.
+</div>
+
+            <div class="view-project-button">
+            <button class="s1 magnetic-button"
+        onclick="window.location.href='https://vk-tasty.vercel.app/'">
+  <div class="magnetic-text">View Project</div>
+</button>
+            </div>
+          </div>
+        </div>
+        <div class="view-all-work">
+          <div>
+            <button class="vaw-button magnetic-button">
+              <div class="magnetic-text">View all work</div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="who-are-we">
+        <div class="who-are-we-title">
+          <div class="waw-first-line">who</div>
+
+          <div class="waw-second-line">we are</div>
+        </div>
+        <div class="waw-p1">
+        <span class="waw-overflow-line">At VK Software Solutions®</span>
+<span class="waw-overflow-line">we go beyond coding—</span>
+<span class="waw-overflow-line">we engineer innovation,</span>
+<span class="waw-overflow-line">crafting digital experiences</span>
+<span class="waw-overflow-line">that empower your vision</span>
+<span class="waw-overflow-line">and stand the test of time.</span>
+
+        </div>
+        <div class="waw-p2">
+          <div class="waw-p2-text">
+            <div class="waw-p2-para waw-popup">
+             Turning Vision into Digital Reality.
+At VK Software Solutions, we transform complex ideas into elegant, high-performance software. From web apps to mobile solutions, our mission is to make technology work seamlessly for your business while inspiring the future of digital experiences.
+            </div>
+            <div class="waw-button waw-popup">
+           <button class="waw-button-text magnetic-button" 
+        onclick="window.open('https://www.linkedin.com/company/vk-software-solutions27/')">
+  <div class="magnetic-text">About us</div>
+</button>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cards">
+        
+
+        <div class="two-card-section">
+          <div class="card3-cardsection cardright card3">
+            <div class="card-number">10<sup>+</sup></div>
+            <div class="card-text">
+              <span class="card-section-description"> projects </span>
+              <span> completed</span>
+            </div>
+          </div>
+
+          
+      </section>
+      <section class="partner-love-container">
+       
+          
+        
+        <div class="card-reviews">
+      </section>
+      <!-- <div class="di-line">-</div> -->
+      <section class="dive-in-section">
+        <div class="dive-in-container">
+          <div class="di-first-text">VK</div>
+
+          <div class="di-first-text">Software Solutions</div>
+          <div class="di-first-text">VK</div>
+        </div>
+        <div class="dive-in-container-reverse">
+          <div class="di-first-text">Software Solutions</div>
+          <div class="di-first-text">VK</div>
+          <div class="di-first-text">Software Solutions</div>
+        </div>
+      </section>
+
+      <section class="dribble-container">
+        <div class="dribble-overlay-images">
+          <img
+            src="./public/images/1.png"
+            alt=""
+            class="dribble-image i1"
+          />
+          <img
+            src="./public/images/2.png"
+            alt=""
+            class="dribble-image dribble-image-right i2"
+          />
+          <img
+            src="./public/images/3.png"
+            alt=""
+            class="dribble-image i3"
+          />
+          <img
+            src="./public/images/4.png"
+            alt=""
+            class="dribble-image dribble-image-right i4"
+          />
+          <img
+            src="./public/images/5.png"
+            alt=""
+            class="dribble-image i5"
+          />
+          <img
+            src="./public/images/6.png"
+            alt=""
+            class="dribble-image dribble-image-right i6"
+          />
+        </div>
+        <div class="dribble-pop-up">
+          <div class="dribble-logo">
+            <img
+              src="./public/images/dribbble.1a51ca99.webp"
+              alt=""
+              class="db-logo"
+            />
+          </div>
+      
+       
+        
+      </section>
+      <section class="social-media-section">
+        <div class="sm-title">
+          <div class="sm-title-line1">join our</div>
+          <div class="sm-title-line2">Team</div>
+        </div>
+        <div class="sm-accounts">
+          <div class="sm-account ac1">
+            <div class="sm-account-text">
+             
+
+            <div class="sm-arrow">
+              <div class="sm-line"></div>
+              <div class="sm-line-head"></div>
+            </div>
+          </div>
+
+          <div class="sm-account ac2">
+            <div class="sm-account-text">
+<div class="sm-name" 
+     onclick="window.open('https://www.linkedin.com/company/vk-software-solutions27/about/', '_blank')" 
+     style="cursor:pointer;">
+  LinkedIn
+</div>
+              <div class="sm-image-container">
+                <img
+                  src="./public/images/linkedin.svg"
+                  alt=""
+                  class="sm-image ic2"
+                />
+              </div>
+            </div>
+            <div class="sm-arrow">
+              <div class="sm-line"></div>
+              <div class="sm-line-head"></div>
+            </div>
+          </div>
+
+          <div class="sm-account ac3">
+            <div class="sm-account-text">
+              <div class="sm-name">Instagram</div>
+              <div class="sm-image-container">
+                <img
+                  src="./public/images/instagram.svg"
+                  alt=""
+                  class="sm-image ic3"
+                />
+              </div>
+            </div>
+            <div class="sm-arrow">
+              <div class="sm-line"></div>
+              <div class="sm-line-head"></div>
+            </div>
+          </div>
+
+          <div class="sm-account ac4">
+            
+            
+            <div class="sm-arrow">
+              <div class="sm-line"></div>
+              <div class="sm-line-head"></div>
+            </div>
+          </div>
+
+          <div class="sm-account ac5">
+           
+            <div class="sm-arrow">
+              <div class="sm-line"></div>
+              <div class="sm-line-head"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="footer-title">
+          <div class="ft-lines">
+            <div class="ft-line1">The Future </div>
+            <div class="ft-line2">Starts Here!</div>
+          </div>
+          <div class="ft-button">
+            <button class="footer-button magnetic-button">
+              <div class="magnetic-text">Let's talk!</div>
+            </button>
+          </div>
+        </div>
+
+        <div class="sm-arrow footer-line">
+          <div class="sm-line"></div>
+          <div class="sm-line-head"></div>
+        </div>
+
+        <div class="contact-info">
+          <div class="email ci-div">
+            <div class="email-title ci-title">Email</div>
+            <div class="email-address ci-value">vk@softwaresolutions.com</div>
+          </div>
+
+          <div class="call ci-div">
+            <div class="call-title ci-title">Call</div>
+            <div class="call-no ci-value">+91 7981967209</div>
+          </div>
+
+        
+        </div>
+
+        <div class="sm-arrow footer-line">
+          <div class="sm-line"></div>
+          <div class="sm-line-head"></div>
+        </div>
+
+        <div class="watermark">
+          <div class="watermark-trionn">©2025 VK Software Solutions <sup>®</sup></div>
+          <div class="scrollup magnetic-buttons">
+            <img src="./public/images/move-top.650752b8.svg" alt="" />
+          </div>
+        </div>
+      </section>
+   
+    </div>
+
+    <div class="hamburger-toggle hamburger-hide-class">
+      <div class="hamburger-section-container">
+        <div class="hs-list">
+<div class="hs-work hs-list-item" onclick="window.location.href='work.html'">Work</div>
+          <div class="hs-about hs-list-item" onclick="window.location.href='about.html'">About</div>
+<div class="hs-services hs-list-item" onclick="window.location.href='services.html'">Services</div>
+<div class="hs-team hs-list-item" onclick="window.location.href='team.html'">Team</div>
+<div class="hs-contact hs-list-item" onclick="window.location.href='contact.html'">Contact</div>
+<div class="hs-careers hs-list-item" onclick="window.location.href='careers.html'">Careers</div>
+        </div>
+
+        <div class="hs-social-contact">
+          <div class="hs-email-phone">
+            <div class="hs-email">vk@softwaresolutions.com</div>
+            <div class="hs-phone">+91 7981967209 </div>
+          </div>
+          <div class="social-icons">
+            <img src="./public/images/linkedin.svg" alt="" width="38px" />
+            <img src="./public/images/instagram.svg" alt="" width="38px" />
+            <img src="./public/images/facebook.svg" alt="" width="38px" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </body>
+</html>
