@@ -528,14 +528,14 @@ html {
 .mobile-fl-content {
   font-size: var(--main-heading-font-size);
   text-align: center;
-  font-family: "MyFont";
+  font-family: "San-Serif";
   margin-bottom: var(--main-heading-line-gap);
   display: none;
 }
 .mobile-sl-content {
   font-size: var(--main-heading-font-size);
   text-align: center;
-  font-family: "MyFont";
+  font-family: "San-Serif";
   margin-bottom: var(--main-heading-line-gap);
   margin-top: var(--new-main-heading-line-gap);
   display: none;
