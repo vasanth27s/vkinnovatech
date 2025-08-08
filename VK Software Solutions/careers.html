@@ -2,126 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Careers — VK Software Solutions</title>
   <meta name="description" content="Join VK — open roles and culture." />
   <style>
     :root {
-      --bg:#061524;
-      --muted:#98adbf;
-      --accent:#00d4ff;
-      --card:#0b1220;
-      --radius:12px;
-      --maxwidth:1100px;
+      --bg: #061524;
+      --muted: #98adbf;
+      --accent: #00d4ff;
+      --card: #0b1220;
+      --radius: 12px;
+      --maxwidth: 1100px;
     }
     * {
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     body {
-      font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto;
-      color:#eaf8ff;
-      background:linear-gradient(180deg,#021224,#041424);
-      padding:26px;
-      display:flex;
-      justify-content:center;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto;
+      color: #eaf8ff;
+      background: linear-gradient(180deg, #021224, #041424);
+      padding: 20px;
+      display: flex;
+      justify-content: center;
     }
     .wrap {
-      max-width:var(--maxwidth);
-      width:100%;
+      max-width: var(--maxwidth);
+      width: 100%;
     }
     header {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
     .logo {
-      width:46px;
-      height:46px;
-      border-radius:10px;
-      background:linear-gradient(90deg,var(--accent),#8e44ff);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:700;
-      color:#04101a;
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--accent), #8e44ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #04101a;
     }
     .nav {
-      display:flex;
-      gap:10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
     .nav a {
-      color:var(--muted);
-      text-decoration:none;
-      padding:8px 10px;
-      border-radius:8px;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.05);
     }
     .nav a.active {
-      background:linear-gradient(90deg,var(--accent),#8e44ff);
-      color:#04101a;
+      background: linear-gradient(90deg, var(--accent), #8e44ff);
+      color: #04101a;
     }
     .grid {
-      display:grid;
-      grid-template-columns:2fr 380px;
-      gap:18px;
+      display: grid;
+      grid-template-columns: 2fr 380px;
+      gap: 18px;
     }
     form {
-      display:flex;
-      flex-direction:column;
-      gap:10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
     }
     form label {
-      font-weight:500;
+      font-weight: 500;
+      font-size: 0.95rem;
     }
     form input, form select, form textarea {
-      padding:8px;
-      border-radius:8px;
-      border:1px solid rgba(255,255,255,0.1);
-      background:rgba(255,255,255,0.02);
-      color:#fff;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.02);
+      color: #fff;
+      font-size: 0.95rem;
+      width: 100%;
     }
     form textarea {
-      resize:vertical;
+      resize: vertical;
     }
     form button {
-      padding:10px 16px;
-      border-radius:8px;
-      border:0;
-      background:linear-gradient(90deg,var(--accent),#8e44ff);
-      color:#04101a;
-      cursor:pointer;
-      font-weight:600;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(90deg, var(--accent), #8e44ff);
+      color: #04101a;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: opacity 0.2s;
+    }
+    form button:hover {
+      opacity: 0.9;
     }
     .sidebar {
-      padding:12px;
-      border-radius:12px;
-      background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);
-      border:1px solid rgba(255,255,255,0.02);
+      padding: 12px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+      border: 1px solid rgba(255, 255, 255, 0.02);
     }
     .benefit {
-      display:flex;
-      gap:8px;
-      margin-bottom:10px;
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
     }
     .pill {
-      padding:6px 8px;
-      border-radius:8px;
-      background:rgba(255,255,255,0.02);
-      color:var(--muted);
-      font-size:13px;
-      display:inline-block;
-      margin-right:6px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--muted);
+      font-size: 13px;
+      display: inline-block;
+      margin-right: 6px;
     }
     footer {
-      margin-top:18px;
-      color:var(--muted);
-      font-size:13px;
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
     }
-    @media (max-width:980px) {
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 980px) {
       .grid {
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        order: -1;
+      }
+    }
+    @media (max-width: 500px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav {
+        justify-content: flex-start;
       }
     }
   </style>
@@ -183,11 +217,10 @@
 
           <button type="submit">Submit Application</button>
           <button 
-    type="button" 
-    onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSclt-fRD62cvYk-YgqQ5420ic6PrK3bx-e9KQD1ghD9ImNyLQ/viewform?usp=header', '_blank')"
-    style="cursor:pointer;">
-Apply Link2</button>
-
+            type="button" 
+            onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSclt-fRD62cvYk-YgqQ5420ic6PrK3bx-e9KQD1ghD9ImNyLQ/viewform?usp=header', '_blank')">
+            Apply Link2
+          </button>
         </form>
       </div>
 
@@ -223,7 +256,7 @@ Apply Link2</button>
 
     <footer>
       To apply: send your CV and portfolio to
-      <a href="mailto:jobs@vk.example" style="color:var(--accent);text-decoration:none">jobs@vk.example</a>
+      <a href="mailto:jobs@vk.example">jobs@vk.example</a>
       with the role in the subject line.
     </footer>
   </div>

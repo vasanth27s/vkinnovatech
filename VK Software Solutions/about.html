@@ -23,49 +23,133 @@
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
       background: linear-gradient(180deg,#04101a 0%, #081428 60%);
       color:#e6eef6;
-      padding:28px;display:flex;justify-content:center;
+      padding:20px;
+      display:flex;
+      justify-content:center;
     }
     .container{max-width:var(--maxwidth);width:100%}
 
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:18px;
+      flex-wrap:wrap;
+      gap:12px;
+    }
     .brand{display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit}
-    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#04101a}
+    .logo{
+      width:48px;height:48px;
+      border-radius:10px;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;color:#04101a;
+    }
 
-    .nav{display:flex;gap:12px}
-    .nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:10px}
-    .nav a.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#04101a}
+    .nav{
+      display:flex;
+      gap:12px;
+      overflow-x:auto;
+      -webkit-overflow-scrolling:touch;
+      scrollbar-width:none;
+    }
+    .nav::-webkit-scrollbar{display:none}
+    .nav a{
+      color:var(--muted);
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:10px;
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+    .nav a.active{
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#04101a;
+    }
 
     /* Hero / story */
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start}
-    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .badge{display:inline-block;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);color:var(--muted);font-size:13px}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 360px;
+      gap:20px;
+      align-items:start;
+    }
+    .card{
+      background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 8px;
+      border-radius:8px;
+      background:rgba(255,255,255,0.02);
+      color:var(--muted);
+      font-size:13px;
+    }
 
     .intro h2{font-size:26px;margin-bottom:6px}
     .intro p{color:var(--muted);margin-bottom:12px}
 
     /* Values */
-    .values{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
-    .value{flex:1;min-width:180px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.02)}
+    .values{
+      display:flex;
+      gap:12px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+    .value{
+      flex:1;
+      min-width:200px;
+      padding:12px;
+      border-radius:10px;
+      background:rgba(255,255,255,0.01);
+      border:1px solid rgba(255,255,255,0.02);
+    }
     .value h4{margin-bottom:8px}
 
-    /* Team spotlight cards to show culture */
-    .spotlight{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-    .person{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
-    .person img{width:100px;height:150px;object-fit:cover;border-radius:8px;margin-bottom:8px}
-    .person h5{font-size:15px;margin-bottom:4px}
-    .person p{font-size:13px;color:var(--muted)}
+    /* Team spotlight */
+    .spotlight{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:12px;
+      margin-top:18px;
+    }
+    .person{
+      padding:12px;
+      border-radius:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      border:1px solid rgba(255,255,255,0.02);
+      text-align:center;
+    }
+    .person img{
+      width:100%;
+      max-width:150px;
+      height:auto;
+      border-radius:8px;
+      margin-bottom:8px;
+    }
+    .person h5{
+      font-size:15px;
+      margin-bottom:4px;
+    }
+    .person p{
+      font-size:13px;
+      color:var(--muted);
+    }
 
     footer{margin-top:18px;color:var(--muted);font-size:13px}
 
+    /* Mobile adjustments */
     @media (max-width:900px){
       .hero{grid-template-columns:1fr}
-      .spotlight{grid-template-columns:1fr}
     }
-
-    /* Extra spacer comments to expand file size and include helpful tips.
-       This About page includes narrative, values, and a cultural snapshot.
-       Use this to tell your story, link to case studies, and add CTAs.
-       You can later replace placeholder images or texts with real content. */
+    @media (max-width:500px){
+      body{padding:14px}
+      .intro h2{font-size:22px}
+      .value{min-width:100%}
+    }
   </style>
 </head>
 <body>
@@ -73,7 +157,8 @@
     <header>
       <a href="work.html" class="brand">
         <div>
-          <strong style="font-size:16px">VK software Solutions</strong><div style="font-size:12px;color:var(--muted)">Software Development</div>
+          <strong style="font-size:16px">VK Software Solutions</strong>
+          <div style="font-size:12px;color:var(--muted)">Software Development</div>
         </div>
       </a>
       <nav class="nav" aria-label="Primary">
@@ -94,44 +179,43 @@
           <p>VK is a small, focused product studio that blends product design, user research, and full stack engineering. We ship fast, iterate with users, and prioritize measurable outcomes for businesses.</p>
 
           <div class="values">
-    <div class="value">
-        <h4>Web Development</h4>
-        <p style="color:var(--muted)">Building responsive, scalable, and user-friendly websites for diverse needs.</p>
-    </div>
-    <div class="value">
-        <h4>App Development</h4>
-        <p style="color:var(--muted)">Creating mobile and desktop applications with seamless performance and design.</p>
-    </div>
-    <div class="value">
-        <h4>Web Designer</h4>
-        <p style="color:var(--muted)">Crafting visually appealing and intuitive designs that enhance user experience.</p>
-    </div>
-    <div class="value">
-        <h4>Cyber Security</h4>
-        <p style="color:var(--muted)">Protecting systems and data with advanced security strategies and monitoring.</p>
-    </div>
-    <div class="value">
-        <h4>Database Administration</h4>
-        <p style="color:var(--muted)">Managing, optimizing, and securing databases for high availability and performance.</p>
-    </div>
-    <div class="value">
-        <h4>Digital Marketing</h4>
-        <p style="color:var(--muted)">Driving online growth through SEO, social media, and targeted ad campaigns.</p>
-    </div>
-</div>
-
+            <div class="value">
+              <h4>Web Development</h4>
+              <p style="color:var(--muted)">Building responsive, scalable, and user-friendly websites for diverse needs.</p>
+            </div>
+            <div class="value">
+              <h4>App Development</h4>
+              <p style="color:var(--muted)">Creating mobile and desktop applications with seamless performance and design.</p>
+            </div>
+            <div class="value">
+              <h4>Web Designer</h4>
+              <p style="color:var(--muted)">Crafting visually appealing and intuitive designs that enhance user experience.</p>
+            </div>
+            <div class="value">
+              <h4>Cyber Security</h4>
+              <p style="color:var(--muted)">Protecting systems and data with advanced security strategies and monitoring.</p>
+            </div>
+            <div class="value">
+              <h4>Database Administration</h4>
+              <p style="color:var(--muted)">Managing, optimizing, and securing databases for high availability and performance.</p>
+            </div>
+            <div class="value">
+              <h4>Digital Marketing</h4>
+              <p style="color:var(--muted)">Driving online growth through SEO, social media, and targeted ad campaigns.</p>
+            </div>
+          </div>
 
           <div style="margin-top:14px;display:flex;gap:10px">
-<button 
-    style="padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--muted)" 
-    onclick="window.location.href='contact.html'">
-    Contact us
-</button>
+            <button 
+              style="padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--muted)" 
+              onclick="window.location.href='contact.html'">
+              Contact us
+            </button>
           </div>
         </div>
 
         <aside class="card">
-          
+          <!-- Optional image or info -->
         </aside>
       </section>
 
@@ -154,7 +238,7 @@
 
           <div class="person">
             <img src="./public/images/kumar.avif" alt="team member">
-            <h5> Kumar — Eng Manager</h5>
+            <h5>Kumar — Eng Manager</h5>
             <p>Distributed systems and developer ergonomics enthusiast.</p>
           </div>
         </div>

@@ -6,31 +6,175 @@
   <title>Services — VK Software Solutions</title>
   <meta name="description" content="Services offered by VK: product design, engineering, research." />
   <style>
-    :root{
-      --bg:#071427;--muted:#9fb2c6;--accent:#00d4ff;--card:#0b1220;--radius:12px;--maxwidth:1080px
+    :root {
+      --bg: #071427;
+      --muted: #9fb2c6;
+      --accent: #00d4ff;
+      --card: #0b1220;
+      --radius: 12px;
+      --maxwidth: 1080px;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;background:linear-gradient(180deg,#031420,#082033);color:#eaf6ff;padding:26px;display:flex;justify-content:center}
-    .wrap{max-width:var(--maxwidth);width:100%}
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
-    .logo{width:46px;height:46px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#8e44ff);display:flex;align-items:center;justify-content:center;font-weight:700;color:#04101a}
-    .nav{display:flex;gap:10px}
-    .nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px}
-    .nav a.active{background:linear-gradient(90deg,var(--accent),#8e44ff);color:#04101a}
 
-    .hero{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
-    .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-    .svc{background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.02)}
-    .svc h4{margin-bottom:8px}
-    .svc p{color:var(--muted);font-size:14px}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    .process{margin-top:18px;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);background:rgba(255,255,255,0.01)}
-    .step{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px}
-    .step .num{width:44px;height:44px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#8e44ff);display:flex;align-items:center;justify-content:center;color:#04101a;font-weight:700}
+    body {
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      background: linear-gradient(180deg, #031420, #082033);
+      color: #eaf6ff;
+      padding: 26px;
+      display: flex;
+      justify-content: center;
+    }
 
-    footer{margin-top:20px;color:var(--muted);font-size:13px}
+    .wrap {
+      max-width: var(--maxwidth);
+      width: 100%;
+    }
 
-    @media (max-width:980px){.svc-grid{grid-template-columns:1fr} .hero{padding:14px}}
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--accent), #8e44ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: #04101a;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    .nav a.active,
+    .nav a:hover {
+      background: linear-gradient(90deg, var(--accent), #8e44ff);
+      color: #04101a;
+    }
+
+    .hero {
+      padding: 18px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .svc {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+      border-radius: 12px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.02);
+    }
+
+    .svc h4 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .svc p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .process {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.01);
+    }
+
+    .step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .step .num {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, var(--accent), #8e44ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #04101a;
+      font-weight: 700;
+    }
+
+    footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      body {
+        padding: 14px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero {
+        padding: 14px;
+      }
+
+      .svc h4 {
+        font-size: 16px;
+      }
+
+      .svc p {
+        font-size: 13px;
+      }
+
+      .step .num {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -38,7 +182,8 @@
     <header>
       <a href="work.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit">
         <div>
-          <strong>VK Software Solutions</strong><div style="font-size:12px;color:var(--muted)">Services</div>
+          <strong>VK Software Solutions</strong>
+          <div style="font-size:12px;color:var(--muted)">Services</div>
         </div>
       </a>
       <nav class="nav">
@@ -54,7 +199,9 @@
     <main>
       <section class="hero">
         <h2 style="font-size:22px">What we do</h2>
-        <p style="color:var(--muted);margin-top:8px">End-to-end product delivery with a focus on usability, performance and measurable business metrics. We combine research, design and engineering into small multidisciplinary teams.</p>
+        <p style="color:var(--muted);margin-top:8px">
+          End-to-end product delivery with a focus on usability, performance and measurable business metrics. We combine research, design and engineering into small multidisciplinary teams.
+        </p>
 
         <div class="svc-grid" aria-label="Services grid">
           <div class="svc">
@@ -69,7 +216,6 @@
             <h4>Engineering</h4>
             <p>Full-stack implementations, realtime systems, well-tested APIs and platform thinking to support growth.</p>
           </div>
-
           <div class="svc">
             <h4>Data & Analytics</h4>
             <p>Event instrumentation, dashboards, and growth experiments with clear learning loops.</p>
@@ -86,7 +232,6 @@
 
         <div class="process">
           <h3 style="margin-bottom:8px">Our process</h3>
-
           <div class="step">
             <div class="num">1</div>
             <div>
@@ -94,7 +239,6 @@
               <div style="color:var(--muted);font-size:14px">Understand users, stakeholders and constraints, run interviews and map outcomes.</div>
             </div>
           </div>
-
           <div class="step">
             <div class="num">2</div>
             <div>
@@ -102,7 +246,6 @@
               <div style="color:var(--muted);font-size:14px">Rapid sketches, prototypes, user tests, iterate until we find clear direction.</div>
             </div>
           </div>
-
           <div class="step">
             <div class="num">3</div>
             <div>
@@ -114,14 +257,20 @@
       </section>
 
       <footer>
-        Interested in a tailored engagement? <a href="contact.html" style="color:var(--accent);text-decoration:none">Let’s talk</a>
+        Interested in a tailored engagement?
+        <a href="contact.html">Let’s talk</a>
       </footer>
     </main>
   </div>
 
   <script>
     // nav active
-    (function(){ const path = location.pathname.split('/').pop()||'services.html'; document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active', a.getAttribute('href')===path)); })();
+    (function() {
+      const path = location.pathname.split('/').pop() || 'services.html';
+      document.querySelectorAll('.nav a').forEach(a =>
+        a.classList.toggle('active', a.getAttribute('href') === path)
+      );
+    })();
   </script>
 </body>
 </html>
