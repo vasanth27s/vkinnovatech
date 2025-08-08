@@ -51,7 +51,7 @@
     /* Team spotlight cards to show culture */
     .spotlight{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
     .person{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02)}
-    .person img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:8px}
+    .person img{width:100px;height:150px;object-fit:cover;border-radius:8px;margin-bottom:8px}
     .person h5{font-size:15px;margin-bottom:4px}
     .person p{font-size:13px;color:var(--muted)}
 
@@ -72,9 +72,8 @@
   <div class="container">
     <header>
       <a href="work.html" class="brand">
-        <div class="logo">VK</div>
         <div>
-          <strong style="font-size:16px">VK software Solutions</strong><div style="font-size:12px;color:var(--muted)">Design & engineering</div>
+          <strong style="font-size:16px">VK software Solutions</strong><div style="font-size:12px;color:var(--muted)">Software Development</div>
         </div>
       </a>
       <nav class="nav" aria-label="Primary">
@@ -95,34 +94,44 @@
           <p>VK is a small, focused product studio that blends product design, user research, and full stack engineering. We ship fast, iterate with users, and prioritize measurable outcomes for businesses.</p>
 
           <div class="values">
-            <div class="value">
-              <h4>Design-led</h4>
-              <p style="color:var(--muted)">Research-first, prototype-often approach that reduces risk and increases clarity.</p>
-            </div>
-            <div class="value">
-              <h4>Product focus</h4>
-              <p style="color:var(--muted)">We care about adoption, retention and creating sustainable growth loops.</p>
-            </div>
-            <div class="value">
-              <h4>Engineering craft</h4>
-              <p style="color:var(--muted)">Maintainable systems and thoughtful tradeoffs for long-term velocity.</p>
-            </div>
-          </div>
+    <div class="value">
+        <h4>Web Development</h4>
+        <p style="color:var(--muted)">Building responsive, scalable, and user-friendly websites for diverse needs.</p>
+    </div>
+    <div class="value">
+        <h4>App Development</h4>
+        <p style="color:var(--muted)">Creating mobile and desktop applications with seamless performance and design.</p>
+    </div>
+    <div class="value">
+        <h4>Web Designer</h4>
+        <p style="color:var(--muted)">Crafting visually appealing and intuitive designs that enhance user experience.</p>
+    </div>
+    <div class="value">
+        <h4>Cyber Security</h4>
+        <p style="color:var(--muted)">Protecting systems and data with advanced security strategies and monitoring.</p>
+    </div>
+    <div class="value">
+        <h4>Database Administration</h4>
+        <p style="color:var(--muted)">Managing, optimizing, and securing databases for high availability and performance.</p>
+    </div>
+    <div class="value">
+        <h4>Digital Marketing</h4>
+        <p style="color:var(--muted)">Driving online growth through SEO, social media, and targeted ad campaigns.</p>
+    </div>
+</div>
+
 
           <div style="margin-top:14px;display:flex;gap:10px">
-            <button style="padding:10px 12px;border-radius:10px;border:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));font-weight:600;color:#04101a">Our approach</button>
-            <button style="padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--muted)">Contact us</button>
+<button 
+    style="padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);background:transparent;color:var(--muted)" 
+    onclick="window.location.href='contact.html'">
+    Contact us
+</button>
           </div>
         </div>
 
         <aside class="card">
-          <h3 style="margin-bottom:8px">Timeline</h3>
-          <div style="font-size:13px;color:var(--muted);line-height:1.6">
-            <strong>2019</strong> — Studio founded as an experiment.<br>
-            <strong>2020</strong> — First SaaS client shipped MVP.<br>
-            <strong>2022</strong> — Grew to full-stack product teams.<br>
-            <strong>2024</strong> — Expanded into AI-assisted UX tooling.
-          </div>
+          
         </aside>
       </section>
 
@@ -132,20 +141,20 @@
 
         <div class="spotlight">
           <div class="person">
-            <img src="https://picsum.photos/seed/a/400/250" alt="team member">
-            <h5>Vasanth Kumar — Founder</h5>
+            <img src="./public/images/01.jpg" alt="team member">
+            <h5>Vasanth Kumar — Software Developer</h5>
             <p>Full-stack engineer, product thinker, and maker of calm systems.</p>
           </div>
 
           <div class="person">
-            <img src="https://picsum.photos/seed/b/400/250" alt="team member">
-            <h5>Asha Patel — Design Lead</h5>
+            <img src="./public/images/deva.png" alt="team member">
+            <h5>Deva — Design Lead</h5>
             <p>Design systems, motion, and delightful micro-interactions.</p>
           </div>
 
           <div class="person">
-            <img src="https://picsum.photos/seed/c/400/250" alt="team member">
-            <h5>Ravi Kumar — Eng Manager</h5>
+            <img src="./public/images/kumar.avif" alt="team member">
+            <h5> Kumar — Eng Manager</h5>
             <p>Distributed systems and developer ergonomics enthusiast.</p>
           </div>
         </div>
