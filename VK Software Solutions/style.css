@@ -152,13 +152,13 @@ canvas{
 
 @media screen and (max-width: 512px) {
   :root {
-    --hamburger-text-size: 3rem;
+    --hamburger-text-size: 4rem;
   }
 }
 
 @media screen and (max-width: 427px) {
   :root {
-    --hamburger-text-size: 3.rem;
+    --hamburger-text-size: 3.5rem;
   }
 }
 
@@ -489,7 +489,6 @@ html {
   top: 55%;
   left: 45%;
 }
-
 
 .first-section-content-container {
   padding-left: var(--padding-horizontal);
