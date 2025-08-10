@@ -1810,9 +1810,4 @@ button.s1 {
   display: block;
 }
 
-.dropdown-toggle::after {
-  content: " \25BC"; /* Unicode for down arrow */
-  font-size: 0.7em;
-  margin-left: 5px;
-}
 
