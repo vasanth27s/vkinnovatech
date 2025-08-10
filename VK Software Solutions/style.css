@@ -152,13 +152,13 @@ canvas{
 
 @media screen and (max-width: 512px) {
   :root {
-    --hamburger-text-size: 4rem;
+    --hamburger-text-size: 3rem;
   }
 }
 
 @media screen and (max-width: 427px) {
   :root {
-    --hamburger-text-size: 3.5rem;
+    --hamburger-text-size: 3.rem;
   }
 }
 
@@ -489,6 +489,7 @@ html {
   top: 55%;
   left: 45%;
 }
+
 
 .first-section-content-container {
   padding-left: var(--padding-horizontal);
@@ -1808,3 +1809,10 @@ button.s1 {
 .hamburger-show-class{
   display: block;
 }
+
+.dropdown-toggle::after {
+  content: " \25BC"; /* Unicode for down arrow */
+  font-size: 0.7em;
+  margin-left: 5px;
+}
+
