@@ -1808,3 +1808,10 @@ button.s1 {
 .hamburger-show-class{
   display: block;
 }
+
+.dropdown-toggle::after {
+  content: " \25BC"; /* Unicode for down arrow */
+  font-size: 0.7em;
+  margin-left: 5px;
+}
+
