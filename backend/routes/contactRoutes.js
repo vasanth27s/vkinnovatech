@@ -1,34 +1,16 @@
-// backend/routes/careerRoutes.js
 const express = require('express');
-const Career = require('../models/Career');
+const Contact = require('../models/Contact');
 
 const router = express.Router();
 
-// POST /api/careers — Accepts JSON with resumeUrl as string
 router.post('/', async (req, res) => {
-  try {
-    const { name, email, phone, position, experience, details, resumeUrl } = req.body;
-
-    if (!name || !email || !position) {
-      return res.status(400).json({ error: 'Name, Email, and Position are required' });
+    try {
+        const contact = new Contact(req.body);
+        await contact.save();
+        res.status(201).json({ success: true, message: 'Contact form submitted' });
+    } catch (err) {
+        res.status(500).json({ success: false, error: err.message });
     }
-
-    const career = new Career({
-      name,
-      email,
-      phone,
-      position,
-      experience,
-      details,
-      resumeUrl // will store exactly what frontend sends
-    });
-
-    await career.save();
-    res.status(201).json({ message: 'Application submitted successfully', career });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: 'Server error' });
-  }
 });
 
 module.exports = router;
