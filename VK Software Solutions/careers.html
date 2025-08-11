@@ -279,7 +279,7 @@ document.getElementById('careerForm').addEventListener('submit', async function(
   }
 
   try {
-    const res = await fetch('http://localhost:3000/api/careers', {
+    const res = await fetch('https://vksoftwaresolutions.onrender.com/api/careers', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
