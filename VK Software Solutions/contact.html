@@ -250,22 +250,50 @@
   </div>
 
   <script>
-    function handleSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      if (!name || !email || !message) {
-        return alert('Please fill all fields');
-      }
-      document.getElementById('contactForm').reset();
+async function handleSubmit(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : "";
+  const message = document.getElementById('message').value.trim();
+
+  if (!name || !email || !message) {
+    return alert('Please fill all required fields');
+  }
+
+  try {
+    const res = await fetch('http://localhost:3000/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        message
+      })
+    });
+
+    if (!res.ok) {
+      const errorText = await res.text();
+      throw new Error(errorText || 'Failed to send contact message');
     }
-    (function(){
-      const p = location.pathname.split('/').pop() || 'contact.html';
-      document.querySelectorAll('.nav a').forEach(a =>
-        a.classList.toggle('active', a.getAttribute('href') === p)
-      );
-    })();
-  </script>
+
+    alert('Your message has been sent successfully!');
+    document.getElementById('contactForm').reset();
+
+  } catch (err) {
+    alert(`Error: ${err.message}`);
+  }
+}
+
+(function(){
+  const p = location.pathname.split('/').pop() || 'contact.html';
+  document.querySelectorAll('.nav a').forEach(a =>
+    a.classList.toggle('active', a.getAttribute('href') === p)
+  );
+})();
+</script>
+
 </body>
 </html>

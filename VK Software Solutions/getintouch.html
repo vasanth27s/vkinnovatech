@@ -204,7 +204,6 @@
   <main class="card" role="main" aria-labelledby="contactTitle">
     <section class="info">
       <div class="brand">
-        <div class="logo">VK</div>
         <div>
           <div style="font-size:13px;color:var(--muted)">VK SOFTWARE</div>
           <div style="font-size:12px;color:var(--muted);margin-top:2px">Creative — Product — Growth</div>
@@ -268,44 +267,74 @@
   </main>
 
   <script>
-    (function(){
-      const btn = document.querySelector('.magnetic-button');
-      if(!btn) return;
-      const strength = 22;
-      btn.addEventListener('pointermove', e => {
-        const rect = btn.getBoundingClientRect();
-        const px = (e.clientX - rect.left) / rect.width;
-        const py = (e.clientY - rect.top) / rect.height;
-        const x = (px - 0.5) * strength;
-        const y = (py - 0.5) * (strength * 0.6);
-        btn.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.03)`;
-      });
-      btn.addEventListener('pointerleave', ()=> btn.style.transform = '');
-    })();
+(function(){
+  const btn = document.querySelector('.magnetic-button');
+  if(!btn) return;
+  const strength = 22;
+  btn.addEventListener('pointermove', e => {
+    const rect = btn.getBoundingClientRect();
+    const px = (e.clientX - rect.left) / rect.width;
+    const py = (e.clientY - rect.top) / rect.height;
+    const x = (px - 0.5) * strength;
+    const y = (py - 0.5) * (strength * 0.6);
+    btn.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.03)`;
+  });
+  btn.addEventListener('pointerleave', ()=> btn.style.transform = '');
+})();
 
-    document.getElementById('contactForm').addEventListener('submit', function(ev){
-      ev.preventDefault();
-      const name = this.name.value.trim();
-      const email = this.email.value.trim();
-      if(!name || !email){
-        alert('Please add your name and email.');
-        return;
-      }
-      document.getElementById('successMsg').style.display = 'block';
-      this.reset();
-      document.getElementById('sendBtn').animate([{transform:'scale(1)'},{transform:'scale(0.98)'},{transform:'scale(1)'}],{duration:280});
+document.getElementById('contactForm').addEventListener('submit', async function(ev){
+  ev.preventDefault();
+
+  const name = this.name.value.trim();
+  const email = this.email.value.trim();
+  const phone = this.phone ? this.phone.value.trim() : "";
+  const message = this.message ? this.message.value.trim() : "";
+
+  if(!name || !email){
+    alert('Please add your name and email.');
+    return;
+  }
+
+  try {
+    const res = await fetch('http://localhost:3000/api/get-in-touch', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name,
+        email,
+        phone,
+        message
+      })
     });
 
-    document.getElementById('copyEmail').addEventListener('click', async()=>{
-      try{
-        await navigator.clipboard.writeText('hello@vk.example');
-        const b = document.getElementById('copyEmail');
-        b.textContent = 'Copied!';
-        setTimeout(()=> b.textContent='Copy email', 1800);
-      }catch(e){
-        alert('Unable to copy — please copy manually: hello@vk.example');
-      }
-    });
-  </script>
+    if (!res.ok) {
+      const errorText = await res.text();
+      throw new Error(errorText || 'Failed to send message');
+    }
+
+    document.getElementById('successMsg').style.display = 'block';
+    this.reset();
+    document.getElementById('sendBtn').animate(
+      [{transform:'scale(1)'},{transform:'scale(0.98)'},{transform:'scale(1)'}],
+      {duration:280}
+    );
+
+  } catch (err) {
+    alert(`Error sending message: ${err.message}`);
+  }
+});
+
+document.getElementById('copyEmail').addEventListener('click', async()=>{
+  try{
+    await navigator.clipboard.writeText('hello@vk.example');
+    const b = document.getElementById('copyEmail');
+    b.textContent = 'Copied!';
+    setTimeout(()=> b.textContent='Copy email', 1800);
+  }catch(e){
+    alert('Unable to copy — please copy manually: hello@vk.example');
+  }
+});
+</script>
+
 </body>
 </html>

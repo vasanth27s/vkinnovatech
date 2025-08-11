@@ -180,94 +180,126 @@
     </header>
 
     <div class="grid">
-      <div>
-        <h2 style="margin-bottom:6px">Career</h2>
-        <p style="color:var(--muted)">Job Opening in VK Software Solutions. Apply Now!</p>
+  <div>
+    <h2 style="margin-bottom:6px">Career</h2>
+    <p style="color:var(--muted)">Job Opening in VK Software Solutions. Apply Now!</p>
 
-        <!-- Career Form -->
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSdu0Voeoit-kFp1NMoYfY4lF3ByPvzY0nSBqsywU1UqOUk6dw/viewform?usp=header" method="get" target="_blank" style="margin-top:12px">
-          <label for="name">Name</label>
-          <input id="name" type="text" name="name" placeholder="Your Name" required>
+    <!-- Career Form -->
+    <form id="careerForm" style="margin-top:12px">
+      <label for="name">Name</label>
+      <input id="name" type="text" name="name" placeholder="Your Name" required>
 
-          <label for="contact">Contact Number</label>
-          <input id="contact" type="tel" name="contact" placeholder="Your Contact Number" required>
+      <label for="phone">Contact Number</label>
+      <input id="phone" type="tel" name="phone" placeholder="Your Contact Number" required>
 
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" placeholder="you@example.com" required>
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="you@example.com" required>
 
-          <label for="post">Apply For Which Post?</label>
-          <select id="post" name="post" required>
-            <option value="">Select a Post</option>
-            <option>Web Designer</option>
-            <option>Web Developer</option>
-            <option>Cyber Security Analyst</option>
-            <option>Mobile App Developer</option>
-            <option>Database Administrator</option>
-            <option>Digital Marketer</option>
-          </select>
+      <label for="position">Apply For Which Post?</label>
+      <select id="position" name="position" required>
+        <option value="">Select a Post</option>
+        <option>Web Designer</option>
+        <option>Web Developer</option>
+        <option>Cyber Security Analyst</option>
+        <option>Mobile App Developer</option>
+        <option>Database Administrator</option>
+        <option>Digital Marketer</option>
+      </select>
 
-          <label for="experience">Years of Experience</label>
-          <input id="experience" type="number" name="experience" placeholder="Years of Experience" min="0" required>
+      <label for="experience">Years of Experience</label>
+      <input id="experience" type="number" name="experience" placeholder="Years of Experience" min="0" required>
 
-          <label for="details">Other Details</label>
-          <textarea id="details" name="details" rows="4" placeholder="Additional information..."></textarea>
+      <label for="details">Other Details</label>
+      <textarea id="details" name="details" rows="4" placeholder="Additional information..."></textarea>
 
-          <label for="resume">Upload Your Resume</label>
-          <input id="resume" type="file" name="resume" accept=".pdf,.doc,.docx" required>
+      <label for="resumeUrl">Resume URL</label>
+      <input id="resumeUrl" type="url" name="resumeUrl" placeholder="https://link-to-your-resume.com">
 
-          <button type="submit">Submit Application</button>
-          <button 
+      <button type="submit">Submit Application</button>
+      <button 
             type="button" 
             onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSclt-fRD62cvYk-YgqQ5420ic6PrK3bx-e9KQD1ghD9ImNyLQ/viewform?usp=header', '_blank')">
             Apply Link2
           </button>
-        </form>
-      </div>
-
-      <aside class="sidebar">
-        <h3 style="margin-bottom:8px">Why join us?</h3>
-        <div class="benefit">
-          <div style="font-weight:700">—</div>
-          <div><strong>Impact</strong>
-            <div style="color:var(--muted)">Work on core product, not just features.</div>
-          </div>
-        </div>
-        <div class="benefit">
-          <div style="font-weight:700">—</div>
-          <div><strong>Flexible</strong>
-            <div style="color:var(--muted)">Remote-friendly and asynchronous culture.</div>
-          </div>
-        </div>
-        <div class="benefit">
-          <div style="font-weight:700">—</div>
-          <div><strong>Growth</strong>
-            <div style="color:var(--muted)">Ownership over projects and mentorship.</div>
-          </div>
-        </div>
-
-        <div style="margin-top:12px">
-          <strong style="display:block;margin-bottom:8px">Perks</strong>
-          <div class="pill">Remote-first</div>
-          <div class="pill">Learning budget</div>
-          <div class="pill">Health stipend</div>
-        </div>
-      </aside>
-    </div>
-
-    <footer>
-      To apply: send your CV and portfolio to
-      <a href="mailto:jobs@vk.example">jobs@vk.example</a>
-      with the role in the subject line.
-    </footer>
+    </form>
   </div>
 
-  <script>
-    (function(){
-      const p = location.pathname.split('/').pop() || 'careers.html';
-      document.querySelectorAll('.nav a').forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === p);
-      });
-    })();
-  </script>
-</body>
-</html>
+  <aside class="sidebar">
+    <h3 style="margin-bottom:8px">Why join us?</h3>
+    <div class="benefit">
+      <div style="font-weight:700">—</div>
+      <div><strong>Impact</strong>
+        <div style="color:var(--muted)">Work on core product, not just features.</div>
+      </div>
+    </div>
+    <div class="benefit">
+      <div style="font-weight:700">—</div>
+      <div><strong>Flexible</strong>
+        <div style="color:var(--muted)">Remote-friendly and asynchronous culture.</div>
+      </div>
+    </div>
+    <div class="benefit">
+      <div style="font-weight:700">—</div>
+      <div><strong>Growth</strong>
+        <div style="color:var(--muted)">Ownership over projects and mentorship.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:12px">
+      <strong style="display:block;margin-bottom:8px">Perks</strong>
+      <div class="pill">Remote-first</div>
+      <div class="pill">Learning budget</div>
+      <div class="pill">Health stipend</div>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  To apply: send your CV and portfolio to
+  <a href="mailto:jobs@vk.example">jobs@vk.example</a>
+  with the role in the subject line.
+</footer>
+
+<script>
+document.getElementById('careerForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById('name').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    phone: document.getElementById('phone').value.trim(),
+    position: document.getElementById('position').value.trim(),
+    experience: parseInt(document.getElementById('experience').value, 10),
+    details: document.getElementById('details').value.trim(),
+    resumeUrl: document.getElementById('resumeUrl').value.trim()
+  };
+
+  if (!data.name || !data.email || !data.position) {
+    return alert('Please fill in required fields: Name, Email, Position');
+  }
+
+  try {
+    const res = await fetch('http://localhost:3000/api/careers', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (!res.ok) throw new Error(await res.text());
+
+    alert('Application submitted successfully!');
+    this.reset();
+
+  } catch (err) {
+    alert(`Error submitting application: ${err.message}`);
+  }
+});
+
+// Highlight current nav link
+(function(){
+  const p = location.pathname.split('/').pop() || 'careers.html';
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === p);
+  });
+})();
+</script>
