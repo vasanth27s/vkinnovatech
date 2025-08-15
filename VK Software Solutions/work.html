@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Work — VK Software Solutions</title>
-<meta name="description" content="Showcase of projects and case studies." />
-<style>
-/* ===== Reset & Base ===== */
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work — VK Software Solutions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <style>
+/* ===== Root Variables ===== */
 :root {
   --bg:#0f1724;
   --card:#0b1220;
@@ -20,6 +20,8 @@
   --fw-regular: 400;
   --fw-semibold: 600;
 }
+
+/* ===== Reset & Base ===== */
 * {box-sizing:border-box;margin:0;padding:0}
 html,body {height:100%}
 body {
@@ -172,6 +174,45 @@ header {
 }
 .stat .num {font-weight:700}
 
+/* ===== Skills Section ===== */
+.skills {
+  margin-top: 40px;
+}
+.skill-category {
+  margin-bottom: 24px;
+}
+.skill-category h3 {
+  font-size: 16px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.skill-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+  border-radius: var(--radius);
+  padding: 12px;
+  width: 90px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.skill-card:hover {
+  transform: translateY(-4px);
+}
+.skill-card i {
+  font-size: 36px;
+  margin-bottom: 8px;
+  display: block;
+}
+.skill-card span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
 /* ===== Footer ===== */
 footer {
   margin-top:32px;
@@ -200,7 +241,7 @@ footer {
   .hero h2 {font-size:22px;}
   .btn {width:100%; text-align:center;}
 }
-</style>
+  </style>
 </head>
 <body>
 <div class="site" id="site">
@@ -227,7 +268,6 @@ footer {
       <h2>Selected projects & case studies</h2>
       <p>Here you'll find a curated set of products, experiments and deep-dive case studies that show how we solve problems: research, product design, engineering and measurable business outcomes.</p>
       <div class="cta-row">
-        <button class="btn">View case study</button>
       </div>
     </div>
     <aside class="sidebar">
@@ -238,6 +278,7 @@ footer {
     </aside>
   </section>
 
+  <!-- Projects Section -->
   <section class="projects">
     <article class="card">
       <div>
@@ -286,6 +327,59 @@ footer {
         <button class="btn" onclick="window.location.href='https://vk-tasty.vercel.app/'">Open</button>
       </div>
     </article>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <div class="skill-category">
+            <h3>Skills</h3>
+
+      <h3>Languages</h3>
+      <div class="card-grid">
+        <div class="skill-card"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+        <div class="skill-card"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+        <div class="skill-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+        <div class="skill-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+        <div class="skill-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+        <div class="skill-card"><i class="devicon-c-plain colored"></i><span>C</span></div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3>Library & Frameworks</h3>
+      <div class="card-grid">
+        <div class="skill-card"><i class="devicon-react-original colored"></i><span>React</span></div>
+        <div class="skill-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+        <div class="skill-card"><i class="devicon-tailwindcss-plain colored"></i><span>Tailwind CSS</span></div>
+        <div class="skill-card"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+        <div class="skill-card"><i class="devicon-express-original colored"></i><span>Express</span></div>
+        <div class="skill-card"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3>Tools & Technologies</h3>
+      <div class="card-grid">
+        <div class="skill-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+        <div class="skill-card"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+        <div class="skill-card"><i class="devicon-visualstudio-plain colored"></i><span>VS Code</span></div>
+        <div class="skill-card"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+        <div class="skill-card"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+        <div class="skill-card"><i class="devicon-figma-plain colored"></i><span>Figma</span></div>
+      </div>
+    </div>
+
+    <div class="skill-category">
+      <h3>Exposed To</h3>
+      <div class="card-grid">
+        <div class="skill-card"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+        <div class="skill-card"><i class="devicon-aws-plain colored"></i><span>AWS</span></div>
+        <div class="skill-card"><i class="devicon-linux-plain colored"></i><span>Linux</span></div>
+        <div class="skill-card"><i class="devicon-wordpress-plain colored"></i><span>WordPress</span></div>
+        <div class="skill-card"><i class="devicon-graphql-plain colored"></i><span>GraphQL</span></div>
+        <div class="skill-card"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
+      </div>
+    </div>
   </section>
 
   <footer>
